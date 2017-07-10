@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>View a guest here</title>
+  </head>
+  <body>
+    <h3><%= @guest.name %></h3><br>
+    <p><%= @guest.occupation %></p>
+    <br>
+    <h3>Appearances</h3>
+    <% @episodes.each do |episode| %>
+      <p>Date: <%= episode.date %>, Number: <%= episode.number %></p>
+    <% end %>
+    <%= link_to "Add an appearance for this guest", add_episode_path(@guest_id) %>
+  </body>
+</html>

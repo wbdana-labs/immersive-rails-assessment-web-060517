@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Add appearances here</title>
+  </head>
+  <body>
+    <%= form_for @guest do |f| %>
+      <%= f.collection_check_boxes :episode_ids, Episode.all, :id, :date do |t| %>
+        <%= t.check_box %><%= t.label %><br>
+      <% end %>
+      <%= f.submit %>
+    <% end %>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>View an episode here</title>
+  </head>
+  <body>
+    <h3>Date: <%= @episode.date %><br>
+    <h3>Number: <%= @episode.number %><br><br>
+
+      <h4>Guests</h4>
+      <% @guests.each do |guest| %>
+        <%= guest.name %>, <%= guest.occupation %>
+      <% end %>
+
+  </body>
+</html>
